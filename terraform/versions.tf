@@ -4,11 +4,18 @@ terraform {
       source  = "hashicorp/aws"
       version = "= 3.70.0"
     }
+
+    default_tags {
+      tags = {
+        Environment = "Dev"
+      }
+    }
   }
+  
 
     backend "s3" {
-    bucket = "terraform-liyifei"
-    region = "ap-east-1"
+        bucket = "terraform-liyifei"
+        region = "ap-east-1"
   }
 }
 
