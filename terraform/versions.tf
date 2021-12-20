@@ -8,7 +8,7 @@ terraform {
   
     backend "s3" {
         bucket = "terraform-liyifei"
-        key=tfstats
+        key="tfstats"
         region = "ap-east-1"
   }
 }
