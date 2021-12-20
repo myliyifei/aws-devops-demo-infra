@@ -41,7 +41,7 @@ module "eks" {
   # If you want to use only fargate you must follow docs `(Optional) Update CoreDNS`
   # available under https://docs.aws.amazon.com/eks/latest/userguide/fargate-getting-started.html
   node_groups = {
-    example = {
+    nodegroups = {
       desired_capacity = 2
 
       instance_types = ["t3.small"]

@@ -22,3 +22,7 @@ output "fargate_profile_arns" {
   description = "Outputs from node groups"
   value       = module.eks.fargate_profile_arns
 }
+
+output ecr_repository_url {
+  value       = resource.aws_ecr_repository.ecr.repository_url
+}
