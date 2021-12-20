@@ -17,7 +17,7 @@ variable "eks_name" {
   description = "EKS Name"
 }
 
-variable eks_cluster_version {
+variable "eks_cluster_version" {
   type        = string
   default     = "1.20"
   description = "EKS Cluster Version"

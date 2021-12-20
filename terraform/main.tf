@@ -8,5 +8,5 @@ resource "random_string" "suffix" {
 
 
 locals {
-  name            = "demo-project-${random_string.suffix.result}"
+  name = "demo-project-${random_string.suffix.result}"
 }
