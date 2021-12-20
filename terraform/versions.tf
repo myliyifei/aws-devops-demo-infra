@@ -8,11 +8,11 @@ terraform {
       version = "= 3.70.0"
     }
   }
-  
-    backend "s3" {
-        bucket = "terraform-liyifei"
-        key="tfstats"
-        region = "ap-east-1"
+
+  backend "s3" {
+    bucket = "terraform-liyifei"
+    key    = "tfstats"
+    region = "ap-east-1"
   }
 }
 
@@ -21,8 +21,8 @@ provider "aws" {
   region = "ap-east-1"
   default_tags {
     tags = {
-        Project = "Demo"
-      }
+      Project = "Demo Project"
+    }
   }
 }
 
