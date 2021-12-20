@@ -17,7 +17,7 @@ provider "aws" {
   region = "ap-east-1"
   default_tags {
     tags = {
-        Environment = "Dev"
+        Project = "Demo"
       }
   }
 }
