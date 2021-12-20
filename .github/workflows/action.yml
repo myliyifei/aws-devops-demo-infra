@@ -32,3 +32,8 @@ jobs:
         id: plan
         if: success()
         run: terraform -chdir=./terraform plan -var-file=./envs/dev/tf.tfvars -lock-timeout=60s -refresh=true -parallelism=10
+
+      - name: Terraform Deploy
+        id: deploy
+        if: success()
+        run: terraform -chdir=./terraform apply -var-file=../envs/dev/tf.tfvars -auto-approve -lock-timeout=60s -refresh=true -parallelism=10
