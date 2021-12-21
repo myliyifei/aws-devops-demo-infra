@@ -31,7 +31,7 @@ module "eks" {
   cluster_version = var.eks_cluster_version
 
   vpc_id          = module.vpc.vpc_id
-  subnets         = [module.vpc.private_subnets[0], module.vpc.public_subnets[1]]
+  subnets         = [module.vpc.private_subnets[0], module.vpc.private_subnets[1], module.vpc.public_subnets[0], module.vpc.public_subnets[1]]
   fargate_subnets = [module.vpc.private_subnets[2]]
 
   cluster_endpoint_private_access = true
